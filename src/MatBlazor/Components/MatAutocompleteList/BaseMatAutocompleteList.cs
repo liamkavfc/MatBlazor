@@ -125,6 +125,9 @@ namespace MatBlazor
             }
         }
 
+        [Parameter]
+        public bool Disabled { get; set; }
+
         private static bool EqualValues(TItem a1, TItem a2)
         {
             return EqualityComparer<TItem>.Default.Equals(a1, a2);

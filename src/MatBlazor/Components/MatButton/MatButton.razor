@@ -2,7 +2,13 @@
 @inherits BaseMatDomComponent
 
 <button class="@ClassMapper.AsString()" style="@StyleMapper.AsString()" @onclick="OnClickHandler" @onclick:stopPropagation=@OnClickStopPropagation disabled=@Disabled aria-label="@(Label ?? Icon)" @ref="Ref" type="@Type" name="@Name" value="@Value" @attributes="Attributes" Id="@Id">
-    <div class="mdc-button__ripple"></div>
+    @if (Animation)
+    {
+        <div class="mdc-button__ripple"></div>
+    }else
+    {
+        <div></div>
+    }
     @if (Icon != null)
     {
         <span class="material-icons mdc-button__icon">@Icon</span>

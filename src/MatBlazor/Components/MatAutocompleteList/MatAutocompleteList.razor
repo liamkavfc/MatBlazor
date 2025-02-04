@@ -3,7 +3,6 @@
 @inherits BaseMatAutocompleteList<TItem>
 @using System.Collections;
 
-
 <div class="@WrapperClassMapper.AsString()">
     <MatTextField Icon="@Icon"
                   OnFocus="@OpenPopup"
@@ -17,7 +16,9 @@
                   OnKeyDown="@OnKeyDown"
                   Outlined="@Outlined"
                   Attributes="@Attributes"
-                  Id="@Id"></MatTextField>
+                  Id="@Id"
+                  Disabled="@Disabled"
+                  Class="@Class"></MatTextField>
     @if (IsShowingClearButton)
     {
         <div class="mat-autocomplete-list-clearbutton">

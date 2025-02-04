@@ -59,6 +59,9 @@ namespace MatBlazor
         [Parameter]
         public string Value { get; set; } = null;
 
+        [Parameter]
+        public bool Animation { get; set; } = true;
+
 
         /// <summary>
         /// Command parameter.
